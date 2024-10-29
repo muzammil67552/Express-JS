@@ -1,23 +1,18 @@
-const  express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', function (req, res){
-    res.send("Hello From Express js Tutorial ");
+app.get('/', function(req, res){
+   res.send("This is Get methode from server");
 });
-app.get('/contact', function (req, res){
-    res.send("Hello From Express  contact page ");
-});
-app.get('/service', function (req, res){
-    res.send("Hello From Express js  service page ");
-});
-
-app.post('/hello', function (req, res){
-    res.send('hello this a post request from the server');
-})
-app.all('/hello', function (req, res){
-    res.send('hello this a post request from the server');
+app.post('/', function(req,res){
+    res.send("This is the POST Request From The Server")
 })
 
-app.listen((8000) ,() =>{
-    console.log('Server is running on port  number 8000');
-});
+app.put('/', function(req,res){
+    res.send("this is the PUT Request From The Server")
+})
+app.delete('/', function(rrq,res){
+    res.send("This is the Delete Request From Server")
+})
+
+app.listen(9000);
